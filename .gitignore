@@ -1,0 +1,12 @@
+# excluye entorno virtual.
+venv/
+
+__pycache__/
+*.py[cod]
+*.pyo
+
+.vscode/
+
+.DS_Store
+
+pass_manager_db.db
