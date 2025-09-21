@@ -53,3 +53,5 @@ pass-manager-qt/
    ```bash
    python app/main.py
 
+## Nota:
+- Las views fueron creadas con el programa Qt Designer
