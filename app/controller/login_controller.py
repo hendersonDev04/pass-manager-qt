@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QWidget, QPushButton, QLineEdit
-from PyQt6.QtCore import pyqtSignal
+from PyQt6.QtCore import pyqtSignal, Qt
+from PyQt6.QtGui import QKeyEvent
 from PyQt6 import uic
 
 from models.login_model import LoginModel
@@ -68,4 +69,8 @@ class LoginController(QWidget):
         
         self.login_successful_signal.emit()
 
-
+    def keyPressEvent(self, event: QKeyEvent):
+        if event.key() == Qt.Key.Key_Return or event.key() == Qt.Key.Key_Enter:
+            self.login()
+        return super().keyPressEvent(event)
+    
